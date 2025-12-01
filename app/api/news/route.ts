@@ -5,6 +5,9 @@ import { rankArticles } from '@/lib/scoring-engine';
 import { getCurrentUser, getUserDictionary } from '@/lib/supabase-client';
 import { supabase } from '@/lib/supabase-client';
 
+export const dynamic = 'force-dynamic';
+
+
 // タイトルから不要な文字列を削除
 function cleanTitle(title: string): string {
     const removePatterns = [
