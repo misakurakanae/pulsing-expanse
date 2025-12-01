@@ -1,0 +1,99 @@
+.trendingSection {
+    margin-bottom: 24px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(251, 113, 133, 0.1) 100%);
+    border: 1px solid rgba(236, 72, 153, 0.3);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+}
+
+.header {
+    margin-bottom: 16px;
+}
+
+.title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    background: linear-gradient(135deg, #ec4899, #fb7185);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.trendingList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.trendingCard {
+    display: flex;
+    gap: 12px;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.trendingCard:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(236, 72, 153, 0.4);
+    transform: translateX(4px);
+}
+
+.rank {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ec4899, #fb7185);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.content {
+    flex: 1;
+    min-width: 0;
+}
+
+
+
+.stat {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    padding: 2px 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+}
+
+/* Light theme overrides */
+[data-theme='light'] .trendingSection {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(251, 113, 133, 0.15) 100%);
+    border-color: rgba(236, 72, 153, 0.4);
+}
+
+[data-theme='light'] .trendingCard {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(236, 72, 153, 0.2);
+}
+
+[data-theme='light'] .trendingCard:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(236, 72, 153, 0.5);
+}
+
+[data-theme='light'] .stat {
+    background: rgba(236, 72, 153, 0.1);
+}

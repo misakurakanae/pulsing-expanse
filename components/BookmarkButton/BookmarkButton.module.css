@@ -1,0 +1,30 @@
+.bookmarkBtn {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.bookmarkBtn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: scale(1.1);
+}
+
+.bookmarkBtn svg {
+    transition: all 0.2s ease;
+}
+
+.bookmarked {
+    color: #ef4444;
+}
+
+.bookmarked svg {
+    fill: #ef4444;
+    filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.4));
+}

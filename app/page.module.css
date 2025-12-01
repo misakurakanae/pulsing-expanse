@@ -1,0 +1,317 @@
+.stats span {
+    padding: 4px 10px;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 10px;
+}
+
+.dictionaryLink {
+    padding: 4px 10px;
+    background: rgba(139, 92, 246, 0.2);
+    border-radius: 10px;
+    color: #c4b5fd;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.dictionaryLink:hover {
+    background: rgba(139, 92, 246, 0.3);
+}
+
+.main {
+    margin-bottom: 80px;
+}
+
+.loading {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 20px;
+    border: 3px solid var(--bg-secondary);
+    border-top-color: var(--accent-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.newsList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.newsCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 14px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+.newsCard:hover {
+    transform: translateY(-2px);
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.15);
+}
+
+.newsCard.fading {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+    transition: all 0.3s ease-out;
+}
+
+.cardHeader {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.wordRegistrationInline {
+    display: flex;
+    gap: 4px;
+    margin-left: auto;
+}
+
+.wordInputInline {
+    width: 70px;
+    padding: 2px 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 0.7rem;
+}
+
+.wordInputInline:focus {
+    outline: none;
+    border-color: rgba(139, 92, 246, 0.6);
+}
+
+.wordInputInline::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.addWordBtnInline {
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    background: rgba(139, 92, 246, 0.2);
+    border: 1px solid rgba(139, 92, 246, 0.5);
+    border-radius: 6px;
+    color: #c4b5fd;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.addWordBtnInline:hover {
+    background: rgba(139, 92, 246, 0.4);
+}
+
+.rank {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.7rem;
+}
+
+.source {
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.score {
+    background: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.date {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.7rem;
+}
+
+.newsTitle {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+.newsTitle a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.newsTitle a:hover {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.ratingSection {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ratingLabel {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    margin: 0 0 8px 0;
+}
+
+.ratingButtons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.ratingBtn {
+    padding: 8px 12px;
+    background: rgba(139, 92, 246, 0.1);
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    border-radius: 8px;
+    color: #c4b5fd;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ratingBtn:hover {
+    background: rgba(139, 92, 246, 0.2);
+    border-color: rgba(139, 92, 246, 0.6);
+    transform: scale(1.03);
+}
+
+.ratingBtn:active {
+    transform: scale(0.98);
+}
+
+.empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-secondary);
+}
+
+.refreshBtn {
+    margin-top: 12px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.refreshBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    background: rgba(139, 92, 246, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+    animation: slideIn 0.3s ease-out;
+    z-index: 1000;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        padding: 12px;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .newsCard {
+        padding: 12px;
+    }
+
+    .newsTitle {
+        font-size: 0.95rem;
+    }
+
+    .ratingButtons {
+        gap: 5px;
+    }
+
+    .ratingBtn {
+        padding: 7px 10px;
+        font-size: 0.85rem;
+    }
+
+    .toast {
+        top: 10px;
+        right: 10px;
+        font-size: 0.85rem;
+        padding: 10px 16px;
+    }
+}

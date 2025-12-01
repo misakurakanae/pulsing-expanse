@@ -1,0 +1,161 @@
+.sidebar {
+    position: sticky;
+    top: 20px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.promoCard {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    transition: all 0.3s ease;
+}
+
+.promoCard:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(139, 92, 246, 0.3);
+    transform: translateY(-2px);
+}
+
+.promoCard.premium {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+.cardHeader {
+    margin-bottom: 8px;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    background: rgba(99, 102, 241, 0.2);
+    color: #a5b4fc;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge.premiumBadge {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(236, 72, 153, 0.3));
+    color: #f0abfc;
+}
+
+.cardTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: var(--text-primary);
+}
+
+.cardDescription {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.cardButton {
+    display: inline-block;
+    width: 100%;
+    padding: 8px 16px;
+    background: rgba(139, 92, 246, 0.2);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 8px;
+    color: #c4b5fd;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.cardButton:hover {
+    background: rgba(139, 92, 246, 0.3);
+    border-color: rgba(139, 92, 246, 0.6);
+    color: #e9d5ff;
+}
+
+.featureList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+}
+
+.featureList li {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    padding: 4px 0;
+}
+
+.premiumButton {
+    width: 100%;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.helpCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+}
+
+.helpText {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0 0 8px 0;
+}
+
+.helpLink {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #60a5fa;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.helpLink:hover {
+    color: #93c5fd;
+}
+
+/* Light theme */
+[data-theme='light'] .promoCard {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='light'] .promoCard:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+[data-theme='light'] .promoCard.premium {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(236, 72, 153, 0.15) 100%);
+}
+
+[data-theme='light'] .helpCard {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Hide on mobile/tablet */
+@media (max-width: 1200px) {
+    .sidebar {
+        display: none;
+    }
+}

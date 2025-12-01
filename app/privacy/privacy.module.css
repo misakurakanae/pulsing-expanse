@@ -1,0 +1,145 @@
+.container {
+    min-height: 100vh;
+    padding: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.backBtn {
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: #aaa;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.backBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.sectionTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    color: #c4b5fd;
+}
+
+.promise {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.promiseItem {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.icon {
+    font-size: 1.5rem;
+}
+
+.promiseItem h3 {
+    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.promiseItem p {
+    margin: 0;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+    color: #cbd5e1;
+}
+
+.list li::before {
+    content: '•';
+    position: absolute;
+    left: 8px;
+    color: #8b5cf6;
+    font-weight: bold;
+}
+
+.note {
+    margin-top: 16px;
+    padding: 12px;
+    background: rgba(139, 92, 246, 0.1);
+    border-left: 3px solid #8b5cf6;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+.link {
+    color: #60a5fa;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.link:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    padding-top: 32px;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Light theme */
+[data-theme='light'] .section {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+[data-theme='light'] .promiseItem {
+    background: rgba(16, 185, 129, 0.15);
+}

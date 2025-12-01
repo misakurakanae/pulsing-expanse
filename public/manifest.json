@@ -1,0 +1,59 @@
+{
+    "name": "My News - パーソナライズドニュース",
+    "short_name": "My News",
+    "description": "AIがあなた専用にカスタマイズしたニュースフィード",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0a0f",
+    "theme_color": "#6366f1",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/screenshot-mobile.png",
+            "sizes": "390x844",
+            "type": "image/png",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "/screenshot-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "form_factor": "wide"
+        }
+    ],
+    "categories": [
+        "news",
+        "productivity"
+    ],
+    "shortcuts": [
+        {
+            "name": "ニュース",
+            "url": "/",
+            "description": "最新ニュースを見る"
+        },
+        {
+            "name": "あとで読む",
+            "url": "/bookmarks",
+            "description": "保存した記事"
+        },
+        {
+            "name": "設定",
+            "url": "/settings",
+            "description": "ジャンル設定"
+        }
+    ]
+}

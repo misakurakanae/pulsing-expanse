@@ -1,0 +1,31 @@
+.shareBtn {
+    padding: 6px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #1d9bf0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shareBtn:hover {
+    background: rgba(29, 155, 240, 0.1);
+    border-color: rgba(29, 155, 240, 0.4);
+    transform: scale(1.05);
+}
+
+.shareBtn svg {
+    transition: all 0.2s ease;
+}
+
+/* Light theme */
+[data-theme='light'] .shareBtn {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='light'] .shareBtn:hover {
+    background: rgba(29, 155, 240, 0.15);
+}

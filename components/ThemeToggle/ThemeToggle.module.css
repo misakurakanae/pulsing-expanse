@@ -1,0 +1,41 @@
+.themeToggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fbbf24;
+    /* Amber for sun/moon */
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    backdrop-filter: blur(5px);
+}
+
+.themeToggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(15deg) scale(1.1);
+    box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+}
+
+.icon {
+    filter: drop-shadow(0 0 2px rgba(251, 191, 36, 0.5));
+}
+
+.label {
+    display: none;
+}
+
+/* Light theme overrides */
+[data-theme='light'] .themeToggle {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #f59e0b;
+}
+
+[data-theme='light'] .themeToggle:hover {
+    background: rgba(0, 0, 0, 0.1);
+}

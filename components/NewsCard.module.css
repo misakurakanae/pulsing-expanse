@@ -1,0 +1,130 @@
+.card {
+    background: rgba(26, 26, 46, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.title a {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.title a:hover {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.summaryContainer {
+    margin-bottom: 20px;
+}
+
+.summary {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-height: 4.8em;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.summary.expanded {
+    max-height: none;
+}
+
+.expandBtn {
+    color: var(--accent-primary);
+    font-size: 0.875rem;
+    margin-top: 8px;
+    padding: 4px 0;
+    font-weight: 600;
+}
+
+.expandBtn:hover {
+    color: var(--accent-secondary);
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.ratingButtons {
+    display: flex;
+    gap: 8px;
+}
+
+.starBtn {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+    padding: 4px;
+}
+
+.starBtn:hover {
+    color: #fbbf24;
+    transform: scale(1.2);
+}
+
+.starBtn.active {
+    color: #fbbf24;
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+}
+
+.notInterested {
+    padding: 8px 16px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 8px;
+    color: #f87171;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.notInterested:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: #ef4444;
+}
+
+.notInterested.active {
+    background: rgba(239, 68, 68, 0.3);
+    border-color: #ef4444;
+    color: #fca5a5;
+}
+
+@media (max-width: 640px) {
+    .card {
+        padding: 16px;
+    }
+
+    .title {
+        font-size: 1.1rem;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .notInterested {
+        width: 100%;
+    }
+}
